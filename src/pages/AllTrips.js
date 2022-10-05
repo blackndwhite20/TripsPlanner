@@ -1,16 +1,17 @@
+import TripList from "../components/trips/TripList";
+
 const DUMMY_DATA = [
   {
     id: "trip1",
     title: "Malta",
-    image: "https://media.nomadicmatt.com/maltaguide_.jpg",
+    image: "/img/malta.jpg",
     address: "Malta",
     description: "Trip in Malta 2022",
   },
   {
     id: "trip2",
     title: "Adriatic Sea Sailing",
-    image:
-      "https://www.purevacations.com/wp-content/uploads/2020/05/Beautiful-bay-in-Greece-1024x683.jpg",
+    image: "/img/sailing.jpg",
     address: "Lefkada",
     description: "Sailing trip with friends 2022",
   },
@@ -20,11 +21,7 @@ function AllTripsPage() {
   return (
     <section>
       <h1>All trips</h1>
-      <ul>
-        {DUMMY_DATA.map((trip) => {
-          return <li key={trip.id}>{trip.title}</li>;
-        })}
-      </ul>
+      <TripList trips={DUMMY_DATA}></TripList>
     </section>
   );
 }

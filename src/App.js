@@ -3,11 +3,12 @@ import AllTripsPage from "./pages/AllTrips";
 import NewTripPage from "./pages/NewTrip";
 import FavouritesPage from "./pages/Favorites";
 import MainNavigation from "./components/layout/MainNavigation";
+import Layout from "./components/layout/Layout";
 
 function App() {
   return (
-    <div>
-      <MainNavigation></MainNavigation>
+    <Layout>
+      {/* <MainNavigation></MainNavigation> */}
       <Switch>
         <Route path="/" exact>
           <AllTripsPage />
@@ -21,7 +22,7 @@ function App() {
           <FavouritesPage />
         </Route>
       </Switch>
-    </div>
+    </Layout>
   );
 }
 
